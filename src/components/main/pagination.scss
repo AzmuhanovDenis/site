@@ -1,0 +1,71 @@
+.pag-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    .pag {
+        display: flex;
+        align-items: center;
+        list-style: none;
+
+        .pag-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+
+            &:hover:not(.arrow, .dots, .active) {
+                font-weight: 500;
+                border-bottom: 1px solid secondary("gray");
+            }
+        }
+
+        .pag-item a,
+        .pag-item span {
+            text-decoration: none;
+
+            font: {
+                family: "Inter";
+                size: 16px;
+                weight: 300;
+            }
+
+            color: primary("gray-dark");
+        }
+
+        .active {
+            background-color: #1212120D;
+            border-radius: 4px;
+
+            a {
+                font-weight: 600;
+            }
+        }
+
+        .arrow svg {
+            fill: primary("gray-dark");
+        }
+
+        .arrow:hover {
+            background-color: #1212120D;
+            border-radius: 4px;
+
+            svg {
+                fill: primary("black");
+            }
+        }
+
+        .arrow.prev {
+            margin-right: 20px;
+        }
+
+        .arrow.next {
+            margin-left: 20px;
+        }
+
+        .pag-item:not(.arrow) {
+            margin: 0 4px;
+        }
+    }
+}

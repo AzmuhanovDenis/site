@@ -1,0 +1,29 @@
+$primary-colors: (
+    "white": #ffffff,
+    "black": #121212,
+    "gray-light": #DEDEDE,
+    "gray-dark": #575757
+);
+
+$secondary-colors: (
+    "white": #FCFCFC,
+    "black": #1A1818,
+    "gray": #9C9C9C
+);
+
+$accent-colors: (
+    "red": #9B4B4B,
+    "gold": #AB8956
+);
+
+@function primary($key) {
+    @return map-get($primary-colors, $key);
+}
+
+@function secondary($key) {
+    @return map-get($secondary-colors, $key);
+}
+
+@function accent($key) {
+    @return map-get($accent-colors, $key);
+}

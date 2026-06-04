@@ -1,0 +1,198 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 896px;
+    background-color: primary("white");
+    transition: background-color 0.3s;
+}
+
+body.darkTheme {
+    background-color: primary("black");
+
+    .ellipse-btn-block {
+        background-color: secondary("black");
+    }
+
+    .btn-darkTheme::before {
+        background-image: url(@/images/ligth-theme-icon.svg);
+    }
+
+    .search {
+        svg {
+            fill: primary("gray-light");
+        }
+
+        input {
+            background-color: secondary("black");
+            border: none;
+            caret-color: primary("gray-light");
+
+            &::placeholder {
+                color: primary("gray-dark");
+            }
+
+            &:focus {
+                border: 1px solid primary("gray-light");
+
+                &::placeholder {
+                    color: transparent;
+                }
+            }
+        }
+    }
+
+    .icon-btn {
+        button {
+            background-color: secondary("black");
+
+            svg {
+                fill: primary("gray-light");
+            }
+
+            &:hover {
+                background-color: #CDCDCD0D;
+            }
+        }
+    }
+
+    .block-text {
+        background-color: primary("black") !important;
+
+        .line {
+            border-color: accent("gold") !important;
+        }
+
+        .text-top {
+            color: primary("gray-light") !important;
+        }
+
+        .text-bottom {
+            color: accent("gold") !important;
+        }
+    }
+
+    .arrow-btn {
+        background-color: accent("gold") !important;
+    }
+
+    .pag-item {
+        &:hover {
+            border-color: primary("gray-dark") !important;
+        }
+
+        & a,
+        span {
+            color: primary("gray-light") !important;
+        }
+    }
+
+    .pag-item.active {
+        background-color: secondary("black");
+    }
+
+    .pag-item.arrow svg {
+        fill: primary("gray-light");
+    }
+
+    .pag-item.arrow:hover {
+        background-color: secondary("black");
+
+        svg {
+            fill: primary("white");
+        }
+    }
+
+    .filter-overlay {
+        background-color: primary("black");
+
+        .close-btn svg {
+            fill: primary("gray-light");
+        }
+
+        .filter-group-header span {
+            color: primary("gray-light");
+        }
+
+        .toggle-icon::before {
+            filter: brightness(0) saturate(100%) invert(80%) sepia(0%) saturate(0%) hue-rotate(256deg) brightness(110%) contrast(98%);
+        }
+
+        .result-span {
+            color: primary("gray-light");
+
+            &:hover {
+                color: primary("white");
+            }
+        }
+
+        .clear-span {
+            color: primary("gray-dark");
+        }
+
+        .select-container select {
+            background-color: secondary("black") !important;
+            border: none;
+
+            &:focus {
+                border: 1px solid primary("gray-light") !important;
+            }
+
+            &:valid {
+                color: primary("gray-light") !important;
+            }
+
+            option {
+                color: primary("gray-light") !important;
+            }
+
+            &:has(option:checked[disabled]) {
+                color: primary("gray-dark") !important;
+            }
+        }
+
+        .inputs-years {
+            input {
+                background-color: secondary("black");
+                border: none !important;
+                color: primary("gray-light") !important;
+
+                &::placeholder {
+                    color: primary("gray-dark") !important;
+                }
+
+                &:focus {
+                    border: 1px solid primary("gray-light") !important;
+                    caret-color: primary("gray-light");
+                }
+            }
+
+            .dash svg {
+                fill: primary("gray-dark") !important;
+            }
+        }
+    }
+}
+
+header {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    margin-top: 44px;
+}
+
+.container {
+    display: flex;
+    max-width: 1336px;
+    margin: 0 auto;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        padding: 0 20px;
+    }
+}
+
